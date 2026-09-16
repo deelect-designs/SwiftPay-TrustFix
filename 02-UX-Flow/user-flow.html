@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SwiftPay User Flow</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9f8;
+            color: #102a43;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            font-size: 32px;
+        }
+
+        .intro {
+            color: #52606d;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        .flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .node {
+            width: min(100%, 330px);
+            padding: 20px;
+
+            border-radius: 16px;
+
+            background: white;
+
+            border: 1px solid #d9e2dc;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.05);
+
+            text-align: center;
+        }
+
+        .node strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .node span {
+            color: #718096;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .trust {
+            border: 2px solid #087443;
+        }
+
+        .success {
+            background: #edf8f2;
+            border: 2px solid #16803a;
+        }
+
+        .arrow {
+            padding: 10px;
+
+            color: #087443;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .section-label {
+            margin: 35px 0 15px;
+
+            color: #718096;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            margin-top: 40px;
+
+            color: #52606d;
+
+            font-size: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d9e2dc;
+        }
+
+        .dot.trust-dot {
+            background: #087443;
+        }
+
+        .dot.success-dot {
+            background: #16803a;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>SwiftPay TrustFix — User Flow</h1>
+
+        <p class="intro">
+            A trust-centered transaction journey designed to
+            reduce uncertainty by showing security, recipient
+            verification, transaction fees and confirmation
+            information at the moments users need them.
+        </p>
+
+        <div class="flow">
+
+            <div class="node">
+                <strong>1. Login</strong>
+                <span>
+                    User enters phone/email and password.
+                    Secure connection message provides
+                    contextual reassurance.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node">
+                <strong>2. Home Dashboard</strong>
+                <span>
+                    User sees balance, account protection,
+                    recent activity and primary actions.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node trust">
+                <strong>3. Send Money</strong>
+                <span>
+                    User begins a focused transfer journey.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node trust">
+                <strong>4. Recipient Verification</strong>
+                <span>
+                    Recipient name, bank and masked account
+                    information are displayed with verification.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node trust">
+                <strong>5. Transaction Review</strong>
+                <span>
+                    Amount, transfer fee and total cost are
+                    visible before confirmation.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node trust">
+                <strong>6. Security Review</strong>
+                <span>
+                    Encryption and recipient verification
+                    messages reinforce contextual trust.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node">
+                <strong>7. Confirm Transfer</strong>
+                <span>
+                    User reviews the transaction and
+                    authorizes the transfer.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node">
+                <strong>8. Processing</strong>
+                <span>
+                    The interface communicates that the
+                    transaction is being processed.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node success">
+                <strong>9. Transaction Successful</strong>
+                <span>
+                    User receives confirmation, transaction
+                    details and a reference number.
+                </span>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="node">
+                <strong>10. Back to Home</strong>
+                <span>
+                    User returns to the dashboard with
+                    clear closure.
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="legend">
+
+            <div class="legend-item">
+                <span class="dot"></span>
+                <span>User journey step</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="dot trust-dot"></span>
+                <span>Trust intervention</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="dot success-dot"></span>
+                <span>Successful outcome</span>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
