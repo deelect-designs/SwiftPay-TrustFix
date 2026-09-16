@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SwiftPay Privacy Audit</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: #f5f8f6;
+            color: #102a43;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        header {
+            background: #065a34;
+            color: white;
+            padding: 60px 0;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 750px;
+            opacity: 0.92;
+        }
+
+        .badge {
+            display: inline-block;
+            background: white;
+            color: #087443;
+            padding: 7px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        section {
+            padding: 45px 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            background: white;
+            margin-top: -25px;
+            position: relative;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .standards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .standard {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            border: 1px solid #e4ebe7;
+        }
+
+        .standard h3 {
+            color: #087443;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            border-left: 5px solid #087443;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .risk-table th,
+        .risk-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e7ece9;
+            text-align: left;
+        }
+
+        .risk-table th {
+            background: #065a34;
+            color: white;
+        }
+
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .check {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .check span {
+            color: #16803a;
+            font-weight: bold;
+        }
+
+        .principle {
+            background: #087443;
+            color: white;
+            border-radius: 18px;
+            padding: 35px;
+            font-size: 24px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #102a43;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .notice {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff8e1;
+            border-left: 5px solid #f0b429;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 850px) {
+            .standards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .checklist {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            .standards {
+                grid-template-columns: 1fr;
+            }
+
+            .risk-table {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+
+        <span class="badge">SWIFTPAY TRUSTFIX</span>
+
+        <h1>Data Privacy Audit</h1>
+
+        <p>
+            A privacy-by-design assessment for a fintech UX prototype,
+            focused on transparency, data minimisation, security and user control.
+        </p>
+
+    </div>
+</header>
+
+<main>
+
+    <section>
+        <div class="container">
+
+            <div class="intro">
+
+                <h2>Privacy Objective</h2>
+
+                <p>
+                    SwiftPay should give users meaningful visibility and control
+                    over their personal and financial information while minimising
+                    unnecessary data collection.
+                </p>
+
+                <div class="notice">
+                    <strong>Prototype Notice:</strong>
+                    This audit demonstrates privacy-conscious design principles.
+                    It does not claim legal compliance, certification or production security.
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <h2>Frameworks Considered</h2>
+
+            <div class="standards">
+
+                <div class="standard">
+                    <h3>NDPA</h3>
+                    <p>Nigeria personal-data protection and accountability.</p>
+                </div>
+
+                <div class="standard">
+                    <h3>GDPR</h3>
+                    <p>European personal-data protection and user rights.</p>
+                </div>
+
+                <div class="standard">
+                    <h3>CCPA / CPRA</h3>
+                    <p>California consumer privacy rights and controls.</p>
+                </div>
+
+                <div class="standard">
+                    <h3>ISO 27001</h3>
+                    <p>Information security management and risk controls.</p>
+                </div>
+
+                <div class="standard">
+                    <h3>ISO 27701</h3>
+                    <p>Privacy Information Management System.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <h2>Privacy-by-Design Controls</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Data Minimisation</h3>
+                    <p>
+                        Collect and display only information required
+                        for a legitimate purpose.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Transparency</h3>
+                    <p>
+                        Explain security, transaction details and privacy
+                        practices at relevant moments.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>User Control</h3>
+                    <p>
+                        Provide clear access to privacy and security
+                        settings and applicable privacy rights.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Security</h3>
+                    <p>
+                        Communicate important security states and design
+                        for appropriate production security controls.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Purpose Limitation</h3>
+                    <p>
+                        Personal information should have a defined,
+                        legitimate purpose.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Retention</h3>
+                    <p>
+                        Data should not be retained indefinitely without
+                        an appropriate documented purpose.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <h2>Trust Architecture</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>01 — Login</h3>
+                    <p>🔒 Secure connection</p>
+                </div>
+
+                <div class="card">
+                    <h3>02 — Home</h3>
+                    <p>🔒 Account protected</p>
+                </div>
+
+                <div class="card">
+                    <h3>03 — Transaction</h3>
+                    <p>✓ Recipient verified</p>
+                    <p>✓ Fee visible</p>
+                    <p>✓ Total visible</p>
+                </div>
+
+                <div class="card">
+                    <h3>04 — Confirmation</h3>
+                    <p>✓ Transfer details encrypted</p>
+                </div>
+
+                <div class="card">
+                    <h3>05 — Success</h3>
+                    <p>Transaction reference provided</p>
+                </div>
+
+                <div class="card">
+                    <h3>06 — Privacy</h3>
+                    <p>Privacy & Security access</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <h2>Privacy Risk Register</h2>
+
+            <table class="risk-table">
+
+                <thead>
+                    <tr>
+                        <th>Risk</th>
+                        <th>Impact</th>
+                        <th>Design Response</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Credential uncertainty</td>
+                        <td>Very High</td>
+                        <td>Secure connection messaging</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wrong recipient</td>
+                        <td>Very High</td>
+                        <td>Recipient verification</td>
+                    </tr>
+
+                    <tr>
+                        <td>Unexpected fees</td>
+                        <td>High</td>
+                        <td>Transparent fee and total</td>
+                    </tr>
+
+                    <tr>
+                        <td>Excessive data collection</td>
+                        <td>High</td>
+                        <td>Data minimisation</td>
+                    </tr>
+
+                    <tr>
+                        <td>Unclear privacy practices</td>
+                        <td>High</td>
+                        <td>Privacy Center</td>
+                    </tr>
+
+                    <tr>
+                        <td>Unnecessary data exposure</td>
+                        <td>High</td>
+                        <td>Mask sensitive information</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <h2>Privacy Checklist</h2>
+
+            <div class="checklist">
+
+                <div class="check">
+                    <span>✓</span> Data categories identified
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Data minimisation considered
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Security messaging included
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Transaction transparency included
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Recipient verification included
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Privacy risks documented
+                </div>
+
+                <div class="check">
+                    <span>○</span> Production encryption implementation
+                </div>
+
+                <div class="check">
+                    <span>○</span> Production authentication
+                </div>
+
+                <div class="check">
+                    <span>○</span> Legal compliance review
+                </div>
+
+                <div class="check">
+                    <span>○</span> Production privacy impact assessment
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div class="principle">
+
+                “Trust should not be communicated only through branding.
+                It should be demonstrated through the interface.”
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <p>SwiftPay TrustFix — Privacy-by-Design UX Case Study</p>
+
+        <p>Prototype-level assessment • September 2026</p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
