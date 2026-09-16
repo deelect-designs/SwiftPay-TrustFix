@@ -12,22 +12,24 @@
 
     <meta
         name="description"
-        content="SwiftPay TrustFix - Secure fintech experience"
+        content="SwiftPay TrustFix - Trust-centered fintech UX redesign"
     >
 
-    <title>SwiftPay | Secure Login</title>
+    <title>SwiftPay TrustFix</title>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
     <main class="app">
 
-        <!-- =========================
+
+        <!-- =====================================
              LOGIN SCREEN
-             ========================= -->
+             ===================================== -->
 
         <section
             id="loginScreen"
@@ -164,7 +166,471 @@
 
         </section>
 
+
+
+        <!-- =====================================
+             HOME DASHBOARD
+             ===================================== -->
+
+        <section
+            id="homeScreen"
+            class="screen"
+        >
+
+
+            <!-- TOP HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="greeting">
+                        Good morning
+                    </p>
+
+                    <h2>
+                        Ada Nwosu
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="profile-button"
+                    aria-label="Open profile"
+                >
+
+                    AN
+
+                </button>
+
+            </header>
+
+
+
+            <!-- ACCOUNT PROTECTION -->
+
+            <div class="protected-status">
+
+                <span class="status-check">
+                    ✓
+                </span>
+
+                <span>
+                    Account protected
+                </span>
+
+                <button
+                    type="button"
+                    class="status-info"
+                    aria-label="Security information"
+                >
+                    i
+                </button>
+
+            </div>
+
+
+
+            <!-- BALANCE CARD -->
+
+            <section class="balance-card">
+
+                <div class="balance-top">
+
+                    <p>
+                        Total Balance
+                    </p>
+
+                    <button
+                        class="balance-toggle"
+                        id="balanceToggle"
+                        aria-label="Hide balance"
+                    >
+                        ◉
+                    </button>
+
+                </div>
+
+
+                <h1 id="balanceAmount">
+                    ₦485,750.00
+                </h1>
+
+
+                <p class="balance-description">
+                    Available balance
+                </p>
+
+
+                <div class="balance-actions">
+
+                    <button
+                        class="balance-action primary-action"
+                        id="sendMoneyButton"
+                    >
+
+                        <span class="action-icon">
+                            ↗
+                        </span>
+
+                        Send Money
+
+                    </button>
+
+
+                    <button
+                        class="balance-action secondary-action"
+                    >
+
+                        <span class="action-icon">
+                            +
+                        </span>
+
+                        Add Money
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUICK ACTIONS -->
+
+            <section class="quick-section">
+
+                <div class="section-heading">
+
+                    <h3>
+                        Quick actions
+                    </h3>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <button
+                        class="quick-action"
+                        id="quickSend"
+                    >
+
+                        <span class="quick-icon">
+                            ↗
+                        </span>
+
+                        <span>
+                            Send
+                        </span>
+
+                    </button>
+
+
+                    <button class="quick-action">
+
+                        <span class="quick-icon">
+                            ↙
+                        </span>
+
+                        <span>
+                            Receive
+                        </span>
+
+                    </button>
+
+
+                    <button class="quick-action">
+
+                        <span class="quick-icon">
+                            ▣
+                        </span>
+
+                        <span>
+                            Bills
+                        </span>
+
+                    </button>
+
+
+                    <button class="quick-action">
+
+                        <span class="quick-icon">
+                            ☷
+                        </span>
+
+                        <span>
+                            History
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RECENT TRANSACTIONS -->
+
+            <section class="transactions-section">
+
+                <div class="section-heading">
+
+                    <h3>
+                        Recent transactions
+                    </h3>
+
+                    <button
+                        class="view-all"
+                        type="button"
+                    >
+                        View all
+                    </button>
+
+                </div>
+
+
+                <div class="transactions-list">
+
+
+                    <!-- TRANSACTION 1 -->
+
+                    <article class="transaction-item">
+
+                        <div class="transaction-icon netflix">
+                            N
+                        </div>
+
+
+                        <div class="transaction-details">
+
+                            <strong>
+                                Netflix
+                            </strong>
+
+                            <span>
+                                Today · Subscription
+                            </span>
+
+                        </div>
+
+
+                        <strong class="transaction-amount debit">
+                            -₦7,500
+                        </strong>
+
+                    </article>
+
+
+
+                    <!-- TRANSACTION 2 -->
+
+                    <article class="transaction-item">
+
+                        <div class="transaction-icon chinedu">
+                            CO
+                        </div>
+
+
+                        <div class="transaction-details">
+
+                            <strong>
+                                Chinedu Okafor
+                            </strong>
+
+                            <span>
+                                Yesterday · Transfer
+                            </span>
+
+                        </div>
+
+
+                        <strong class="transaction-amount credit">
+                            +₦50,000
+                        </strong>
+
+                    </article>
+
+
+
+                    <!-- TRANSACTION 3 -->
+
+                    <article class="transaction-item">
+
+                        <div class="transaction-icon mtn">
+                            M
+                        </div>
+
+
+                        <div class="transaction-details">
+
+                            <strong>
+                                MTN
+                            </strong>
+
+                            <span>
+                                Yesterday · Airtime
+                            </span>
+
+                        </div>
+
+
+                        <strong class="transaction-amount debit">
+                            -₦5,000
+                        </strong>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TRUST CARD -->
+
+            <section class="trust-card">
+
+                <div class="trust-card-header">
+
+                    <div class="trust-symbol">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Your account is protected
+                        </h3>
+
+                        <p>
+                            Security checks are active.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="security-list">
+
+                    <div>
+                        <span>✓</span>
+                        Secure login
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Transaction monitoring
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Privacy controls
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="security-link"
+                    type="button"
+                >
+                    View security settings →
+                </button>
+
+            </section>
+
+
+
+            <!-- BOTTOM NAVIGATION -->
+
+            <nav
+                class="bottom-navigation"
+                aria-label="Main navigation"
+            >
+
+                <button class="nav-item active">
+
+                    <span class="nav-icon">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Home
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    id="navSend"
+                >
+
+                    <span class="nav-icon">
+                        ↗
+                    </span>
+
+                    <span>
+                        Send
+                    </span>
+
+                </button>
+
+
+                <button class="nav-item">
+
+                    <span class="nav-icon">
+                        ◷
+                    </span>
+
+                    <span>
+                        Activity
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    id="navProfile"
+                >
+
+                    <span class="nav-icon">
+                        ○
+                    </span>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </button>
+
+            </nav>
+
+
+
+            <!-- LOGOUT -->
+
+            <button
+                type="button"
+                class="logout-button"
+                id="logoutButton"
+            >
+                Sign out
+            </button>
+
+
+        </section>
+
     </main>
+
 
     <script src="script.js"></script>
 
