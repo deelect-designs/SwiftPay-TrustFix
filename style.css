@@ -1,6 +1,6 @@
 /* =========================================
    SWIFTPAY TRUSTFIX
-   GLOBAL DESIGN SYSTEM
+   GLOBAL STYLES
    ========================================= */
 
 * {
@@ -9,110 +9,63 @@
     box-sizing: border-box;
 }
 
-
 :root {
-
     --primary: #087443;
-
     --primary-dark: #065a34;
-
     --primary-light: #edf8f2;
 
     --background: #f7f9f8;
-
     --white: #ffffff;
 
     --text: #102a43;
-
     --text-secondary: #52606d;
-
     --muted: #718096;
 
     --border: #d9e2dc;
 
     --danger: #c62828;
-
     --success: #16803a;
 
-    --shadow:
-        0 10px 35px
-        rgba(0, 0, 0, 0.06);
-
+    --shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
 }
-
 
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
-    font-family:
-        Inter,
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Inter, Arial, Helvetica, sans-serif;
     background: #e9efec;
-
     color: var(--text);
-
     min-height: 100vh;
-
 }
-
 
 button,
 input {
-
     font: inherit;
-
 }
-
 
 button {
-
     cursor: pointer;
-
 }
-
 
 .app {
-
     width: 100%;
-
     max-width: 430px;
-
     min-height: 100vh;
-
     margin: 0 auto;
-
     background: var(--background);
-
 }
-
 
 .screen {
-
     display: none;
-
     min-height: 100vh;
-
-    padding:
-        32px
-        22px
-        110px;
-
+    padding: 32px 22px 110px;
 }
-
 
 .screen.active {
-
     display: block;
-
 }
-
 
 
 /* =========================================
@@ -120,64 +73,39 @@ button {
    ========================================= */
 
 .brand {
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
-
     padding-top: 25px;
-
     margin-bottom: 60px;
-
 }
 
-
 .brand-logo {
-
     width: 50px;
-
     height: 50px;
-
     border-radius: 15px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     background: var(--primary);
-
     color: white;
 
     font-size: 24px;
-
     font-weight: 800;
-
 }
-
 
 .brand-text h1 {
-
     font-size: 23px;
-
     font-weight: 800;
-
 }
-
 
 .brand-text p {
-
     margin-top: 4px;
-
     color: var(--muted);
-
     font-size: 12px;
-
 }
-
 
 
 /* =========================================
@@ -185,74 +113,47 @@ button {
    ========================================= */
 
 .login-card {
-
     background: var(--white);
-
     padding: 25px;
-
     border-radius: 22px;
-
     box-shadow: var(--shadow);
-
 }
-
 
 .login-header h2 {
-
     font-size: 26px;
-
     line-height: 1.2;
-
 }
 
-
 .login-header p {
-
     color: var(--muted);
-
     font-size: 14px;
 
     margin-top: 8px;
-
     margin-bottom: 25px;
-
 }
-
 
 .form-group {
-
     margin-bottom: 18px;
-
 }
 
-
 .form-group label {
-
     display: block;
 
     font-size: 13px;
-
     font-weight: 600;
 
     margin-bottom: 8px;
-
 }
 
-
 .form-group input {
-
     width: 100%;
 
     padding: 15px;
 
-    border:
-        1px solid
-        var(--border);
-
+    border: 1px solid var(--border);
     border-radius: 12px;
 
     background: white;
-
     color: var(--text);
 
     outline: none;
@@ -262,124 +163,90 @@ button {
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
-
 }
 
-
 .form-group input:focus {
-
     border-color: var(--primary);
 
     box-shadow:
-        0 0 0 3px
-        rgba(8, 116, 67, 0.10);
-
+        0 0 0 3px rgba(8, 116, 67, 0.10);
 }
 
-
 .primary-button {
-
     width: 100%;
 
     border: none;
-
     border-radius: 13px;
 
     padding: 16px;
 
     background: var(--primary);
-
     color: white;
 
     font-size: 15px;
-
     font-weight: 700;
 
+    transition: background 0.2s ease,
+        transform 0.2s ease;
 }
-
 
 .primary-button:hover {
-
     background: var(--primary-dark);
-
 }
 
+.primary-button:active {
+    transform: scale(0.99);
+}
 
 .forgot-password {
-
     display: block;
-
     width: 100%;
 
     margin-top: 18px;
 
     border: none;
-
     background: transparent;
 
     color: var(--primary);
 
     font-size: 13px;
-
     font-weight: 600;
-
 }
 
-
 .security-box {
-
     display: flex;
-
     gap: 12px;
-
     align-items: flex-start;
 
     margin-top: 22px;
-
     padding: 15px;
 
     border-radius: 13px;
 
     background: var(--primary-light);
-
 }
-
 
 .security-icon {
-
     font-size: 20px;
-
     line-height: 1;
-
 }
-
 
 .security-box strong {
-
     display: block;
-
     font-size: 13px;
-
 }
 
-
 .security-box p {
-
     color: var(--muted);
 
     font-size: 11px;
-
     line-height: 1.5;
 
     margin-top: 4px;
-
 }
 
-
 .login-footer {
-
     display: flex;
-
     justify-content: center;
 
     gap: 8px;
@@ -387,68 +254,44 @@ button {
     margin-top: 30px;
 
     color: var(--muted);
-
     font-size: 11px;
-
 }
-
 
 
 /* =========================================
-   DASHBOARD HEADER
+   DASHBOARD
    ========================================= */
 
 .dashboard-header {
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
 }
-
 
 .greeting {
-
     color: var(--muted);
-
     font-size: 12px;
-
     margin-bottom: 5px;
-
 }
-
 
 .dashboard-header h2 {
-
     font-size: 22px;
-
     font-weight: 750;
-
 }
 
-
 .profile-button {
-
     width: 46px;
-
     height: 46px;
 
     border: none;
-
     border-radius: 50%;
 
     background: var(--primary);
-
     color: white;
 
     font-size: 12px;
-
     font-weight: 700;
-
 }
-
 
 
 /* =========================================
@@ -456,83 +299,61 @@ button {
    ========================================= */
 
 .protected-status {
-
     display: inline-flex;
-
     align-items: center;
 
     gap: 7px;
 
     margin-top: 17px;
 
-    padding:
-        7px
-        11px;
+    padding: 7px 11px;
 
     background: var(--primary-light);
-
     color: var(--primary);
 
     border-radius: 20px;
 
     font-size: 11px;
-
     font-weight: 650;
-
 }
 
-
 .status-check {
-
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     width: 16px;
-
     height: 16px;
 
     border-radius: 50%;
 
     background: var(--primary);
-
     color: white;
 
     font-size: 9px;
-
 }
 
-
 .status-info {
-
     width: 16px;
-
     height: 16px;
 
     border: 1px solid var(--primary);
-
     border-radius: 50%;
 
     background: transparent;
-
     color: var(--primary);
 
     font-size: 9px;
-
     font-weight: 700;
-
 }
 
 
-
 /* =========================================
-   BALANCE CARD
+   BALANCE
    ========================================= */
 
 .balance-card {
-
     margin-top: 20px;
 
     padding: 24px;
@@ -540,92 +361,60 @@ button {
     border-radius: 23px;
 
     background: var(--primary);
-
     color: white;
 
     box-shadow:
-        0 15px 35px
-        rgba(8, 116, 67, 0.18);
-
+        0 15px 35px rgba(8, 116, 67, 0.18);
 }
-
 
 .balance-top {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
-
 
 .balance-top p {
-
     font-size: 12px;
-
     opacity: 0.82;
-
 }
 
-
 .balance-toggle {
-
     border: none;
-
     background: transparent;
 
     color: white;
-
     opacity: 0.8;
 
     font-size: 17px;
-
 }
 
-
 .balance-card h1 {
-
     margin-top: 10px;
 
     font-size: 31px;
 
     letter-spacing: -0.8px;
-
 }
 
-
 .balance-description {
-
     margin-top: 5px;
 
     font-size: 10px;
-
     opacity: 0.72;
-
 }
 
-
 .balance-actions {
-
     display: flex;
-
     gap: 10px;
 
     margin-top: 22px;
-
 }
 
-
 .balance-action {
-
     flex: 1;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 7px;
@@ -633,45 +422,28 @@ button {
     padding: 12px 8px;
 
     border-radius: 11px;
-
     border: none;
 
     font-size: 11px;
-
     font-weight: 700;
-
 }
-
 
 .primary-action {
-
     background: white;
-
     color: var(--primary);
-
 }
 
-
 .secondary-action {
-
-    background:
-        rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.14);
 
     color: white;
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.28);
-
+    border: 1px solid rgba(255, 255, 255, 0.28);
 }
-
 
 .action-icon {
-
     font-size: 17px;
-
 }
-
 
 
 /* =========================================
@@ -679,31 +451,20 @@ button {
    ========================================= */
 
 .section-heading {
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     margin-bottom: 14px;
-
 }
-
 
 .section-heading h3 {
-
     font-size: 15px;
-
 }
-
 
 .quick-section {
-
     margin-top: 26px;
-
 }
-
 
 
 /* =========================================
@@ -711,25 +472,19 @@ button {
    ========================================= */
 
 .quick-actions {
-
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 8px;
-
 }
 
-
 .quick-action {
-
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 7px;
@@ -737,51 +492,39 @@ button {
     min-height: 78px;
 
     border: none;
-
     border-radius: 15px;
 
     background: white;
-
     color: var(--text-secondary);
 
     font-size: 10px;
 
     box-shadow:
-        0 4px 15px
-        rgba(0, 0, 0, 0.035);
+        0 4px 15px rgba(0, 0, 0, 0.035);
 
+    transition: transform 0.2s ease;
 }
-
 
 .quick-action:hover {
-
     transform: translateY(-2px);
-
 }
 
-
 .quick-icon {
-
     width: 34px;
-
     height: 34px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 10px;
 
     background: var(--primary-light);
-
     color: var(--primary);
 
     font-size: 18px;
-
 }
-
 
 
 /* =========================================
@@ -789,42 +532,28 @@ button {
    ========================================= */
 
 .transactions-section {
-
     margin-top: 28px;
-
 }
 
-
 .view-all {
-
     border: none;
-
     background: transparent;
 
     color: var(--primary);
 
     font-size: 11px;
-
     font-weight: 650;
-
 }
 
-
 .transactions-list {
-
     display: flex;
-
     flex-direction: column;
 
     gap: 8px;
-
 }
 
-
 .transaction-item {
-
     display: flex;
-
     align-items: center;
 
     gap: 12px;
@@ -834,14 +563,10 @@ button {
     border-radius: 15px;
 
     background: white;
-
 }
 
-
 .transaction-icon {
-
     width: 40px;
-
     height: 40px;
 
     flex-shrink: 0;
@@ -849,40 +574,27 @@ button {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 12px;
 
     background: #edf1ef;
-
     color: var(--text);
 
     font-size: 11px;
-
     font-weight: 800;
-
 }
-
 
 .transaction-details {
-
     flex: 1;
-
 }
-
 
 .transaction-details strong {
-
     display: block;
-
     font-size: 12px;
-
 }
 
-
 .transaction-details span {
-
     display: block;
 
     margin-top: 4px;
@@ -890,30 +602,19 @@ button {
     color: var(--muted);
 
     font-size: 9px;
-
 }
-
 
 .transaction-amount {
-
     font-size: 11px;
-
 }
-
 
 .debit {
-
     color: var(--text);
-
 }
-
 
 .credit {
-
     color: var(--success);
-
 }
-
 
 
 /* =========================================
@@ -921,37 +622,26 @@ button {
    ========================================= */
 
 .trust-card {
-
     margin-top: 20px;
 
     padding: 19px;
 
-    border:
-        1px solid
-        #dcebe2;
-
+    border: 1px solid #dcebe2;
     border-radius: 17px;
 
     background: white;
-
 }
 
-
 .trust-card-header {
-
     display: flex;
 
     gap: 12px;
 
     align-items: center;
-
 }
 
-
 .trust-symbol {
-
     width: 38px;
-
     height: 38px;
 
     flex-shrink: 0;
@@ -959,83 +649,58 @@ button {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 11px;
 
     background: var(--primary-light);
-
     color: var(--primary);
 
     font-weight: 800;
-
 }
-
 
 .trust-card-header h3 {
-
     font-size: 13px;
-
 }
 
-
 .trust-card-header p {
-
     margin-top: 4px;
 
     color: var(--muted);
 
     font-size: 10px;
-
 }
 
-
 .security-list {
-
     display: grid;
 
     gap: 8px;
 
     margin-top: 15px;
-
 }
-
 
 .security-list div {
-
     color: var(--text-secondary);
-
     font-size: 10px;
-
 }
 
-
 .security-list span {
-
     margin-right: 6px;
 
     color: var(--success);
 
     font-weight: 800;
-
 }
 
-
 .security-link {
-
     width: 100%;
 
     margin-top: 15px;
 
     padding-top: 14px;
 
-    border:
-        none;
-
-    border-top:
-        1px solid
-        #edf0ee;
+    border: none;
+    border-top: 1px solid #edf0ee;
 
     background: transparent;
 
@@ -1044,11 +709,8 @@ button {
     text-align: left;
 
     font-size: 10px;
-
     font-weight: 650;
-
 }
-
 
 
 /* =========================================
@@ -1056,46 +718,33 @@ button {
    ========================================= */
 
 .bottom-navigation {
-
     position: fixed;
 
     bottom: 0;
-
     left: 50%;
 
     transform: translateX(-50%);
 
     width: 100%;
-
     max-width: 430px;
 
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    padding:
-        10px
-        12px
+    padding: 10px 12px
         calc(10px + env(safe-area-inset-bottom));
 
-    background:
-        rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.96);
 
-    border-top:
-        1px solid
-        #e5ebe7;
+    border-top: 1px solid #e5ebe7;
 
-    backdrop-filter:
-        blur(12px);
+    backdrop-filter: blur(12px);
 
     z-index: 100;
-
 }
 
-
 .nav-item {
-
     display: flex;
 
     flex-direction: column;
@@ -1105,31 +754,21 @@ button {
     gap: 4px;
 
     border: none;
-
     background: transparent;
 
     color: var(--muted);
 
     font-size: 9px;
-
 }
-
 
 .nav-item.active {
-
     color: var(--primary);
-
     font-weight: 700;
-
 }
-
 
 .nav-icon {
-
     font-size: 19px;
-
 }
-
 
 
 /* =========================================
@@ -1137,13 +776,510 @@ button {
    ========================================= */
 
 .logout-button {
-
     display: block;
 
-    margin:
-        30px
-        auto
-        10px;
+    margin: 30px auto 10px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TRANSACTION HEADER
+   ========================================= */
+
+.transaction-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.back-button {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: white;
+    color: var(--text);
+
+    font-size: 22px;
+}
+
+.transaction-header > div:nth-child(2) {
+    flex: 1;
+    margin-left: 14px;
+}
+
+.eyebrow {
+    color: var(--muted);
+
+    font-size: 9px;
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.transaction-header h2 {
+    margin-top: 3px;
+
+    font-size: 19px;
+}
+
+.header-security {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--primary-light);
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   TRANSFER PROGRESS
+   ========================================= */
+
+.transfer-progress {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.progress-step {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    min-width: 48px;
+}
+
+.progress-step span {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e5ebe7;
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.progress-step small {
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+.progress-step.active span {
+    background: var(--primary);
+    color: white;
+}
+
+.progress-step.active small {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.progress-line {
+    flex: 1;
+
+    height: 2px;
+
+    background: #e5ebe7;
+
+    margin: 0 5px 18px;
+}
+
+.progress-line.active {
+    background: var(--primary);
+}
+
+
+/* =========================================
+   TRANSACTION CONTENT
+   ========================================= */
+
+.transaction-title {
+    margin-bottom: 18px;
+}
+
+.transaction-title h3 {
+    font-size: 18px;
+}
+
+.transaction-title p {
+    margin-top: 6px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   RECIPIENT CARD
+   ========================================= */
+
+.recipient-card,
+.amount-card {
+    padding: 18px;
+
+    border-radius: 17px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.035);
+}
+
+.card-label {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+}
+
+.verified-label {
+    color: var(--success);
+
+    font-size: 9px;
+
+    letter-spacing: 0;
+}
+
+.recipient-main {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 16px;
+}
+
+.recipient-avatar {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.recipient-info strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.recipient-info span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.verification-message {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 17px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: var(--primary-light);
+}
+
+.verification-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: var(--success);
+    color: white;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.verification-message strong {
+    display: block;
+
+    color: var(--primary-dark);
+
+    font-size: 10px;
+}
+
+.verification-message p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   AMOUNT CARD
+   ========================================= */
+
+.amount-card {
+    margin-top: 12px;
+}
+
+.amount-display {
+    margin-top: 12px;
+
+    color: var(--text);
+
+    font-size: 29px;
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+}
+
+.amount-divider {
+    height: 1px;
+
+    margin: 17px 0;
+
+    background: #edf0ee;
+}
+
+.fee-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 9px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+}
+
+.fee-row strong {
+    color: var(--text);
+
+    font-size: 11px;
+}
+
+.total-row {
+    margin-top: 14px;
+
+    padding-top: 13px;
+
+    border-top: 1px dashed #dce3df;
+
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+.total-row strong {
+    color: var(--primary);
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TRANSACTION SECURITY
+   ========================================= */
+
+.transaction-security {
+    display: grid;
+
+    gap: 9px;
+
+    margin-top: 12px;
+}
+
+.security-item {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 13px;
+
+    border: 1px solid #e1ebe5;
+
+    border-radius: 13px;
+
+    background: white;
+}
+
+.security-check {
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+    color: var(--success);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.security-item strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+.security-item p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   CONFIRMATION NOTE
+   ========================================= */
+
+.confirmation-note {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 14px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #f4f6f5;
+
+    color: var(--text-secondary);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.confirmation-note > span {
+    color: var(--primary);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TRANSACTION BUTTONS
+   ========================================= */
+
+.transaction-actions {
+    margin-top: 18px;
+}
+
+.confirm-button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: var(--primary);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.confirm-button:hover {
+    background: var(--primary-dark);
+}
+
+.confirm-button:active {
+    transform: scale(0.99);
+}
+
+.cancel-button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 13px;
 
     border: none;
 
@@ -1152,9 +1288,226 @@ button {
     color: var(--muted);
 
     font-size: 11px;
-
+    font-weight: 600;
 }
 
+
+/* =========================================
+   SUCCESS SCREEN
+   ========================================= */
+
+.success-container {
+    min-height: calc(100vh - 142px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding-top: 25px;
+}
+
+.success-icon-large {
+    width: 74px;
+    height: 74px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+    color: var(--success);
+
+    border: 8px solid #e1f1e8;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.success-label {
+    margin-top: 20px;
+
+    color: var(--success);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.success-container h2 {
+    margin-top: 7px;
+
+    font-size: 24px;
+
+    letter-spacing: -0.4px;
+}
+
+.success-description {
+    max-width: 310px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.receipt-card {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 19px;
+
+    border-radius: 17px;
+
+    background: white;
+
+    text-align: left;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.035);
+}
+
+.receipt-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+.receipt-row span {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.receipt-row strong {
+    color: var(--text);
+
+    font-size: 10px;
+
+    text-align: right;
+}
+
+.receipt-row:nth-child(4) {
+    margin-top: 4px;
+}
+
+.receipt-divider {
+    height: 1px;
+
+    margin: 5px 0 14px;
+
+    background: #edf0ee;
+}
+
+.reference-box {
+    padding: 11px;
+
+    border-radius: 11px;
+
+    background: var(--primary-light);
+}
+
+.reference-box span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.reference-box strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--primary-dark);
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+}
+
+.success-trust-message {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 12px;
+
+    padding: 13px;
+
+    border-radius: 13px;
+
+    background: white;
+
+    text-align: left;
+}
+
+.success-trust-message > span {
+    color: var(--success);
+
+    font-weight: 800;
+}
+
+.success-trust-message strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+.success-trust-message p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.success-home-button {
+    margin-top: 18px;
+}
+
+.secondary-outline-button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background: white;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 700;
+}
 
 
 /* =========================================
@@ -1164,13 +1517,10 @@ button {
 @media (min-width: 700px) {
 
     .app {
-
         min-height: 100vh;
 
         box-shadow:
-            0 0 50px
-            rgba(0, 0, 0, 0.08);
-
+            0 0 50px rgba(0, 0, 0, 0.08);
     }
 
 }
